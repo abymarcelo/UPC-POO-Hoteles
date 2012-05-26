@@ -47,16 +47,58 @@ public class CuentaTest {
         System.out.println("Debe ingresar correo electronico");
     }  
     
+     @Test
+    public void siIngresoCorreoDebeAceptarlo(){
+        assertTrue(admcuenta.verificarCorreo("cvera@hotmail.com"));
+        System.out.println("Correo Ingresado");
+    }
+    
     @Test
     
     public void siNoIngresoPasswordMeDebeDarError(){
-        assertFalse(admcuenta.verificarCorreo(null));
+        assertFalse(admcuenta.verificarPassword(null));
         System.out.println("Debe ingresar Password");
     }  
     @Test
     public void siIngresoPasswordDebeAceptarlo(){
-        assertTrue(admcuenta.verificarCorreo("carlos"));
-        System.out.println("Password Ingresada");
+        assertTrue(admcuenta.verificarPassword("lui123"));
+        System.out.println("Password Ingresado");
+    }
+    
+    @Test
+    public void siNoIngresoRepetirPasswordMeDebeDarError(){
+        assertFalse(admcuenta.verificarRepetirPassword(null));
+        System.out.println("Debe Ingresar repetir Password");
+    }
+    
+    @Test
+    public void siIngresoRepetirPasswordDebeAceptarlo(){
+        assertTrue(admcuenta.verificarRepetirPassword("lui123"));
+        System.out.println("Repetir Password Ingresado");
+    }
+    
+    @Test
+    public void siNoIngresoNombreDeHotelMeDebeDarError(){
+        assertFalse(admcuenta.verificarNombreHotel(null));
+        System.out.println("Debe Ingresar nombre de hotel");
+    }
+     
+    @Test
+    public void siIngresoNombreDeHotelDebeAceptarlo(){
+        assertTrue(admcuenta.verificarNombreHotel("Andes"));
+        System.out.println("Nombre de Hotel Ingresado");
+    }
+    
+    @Test
+    public void siNoIngresoConformidadMeDebeDarError(){
+       assertFalse(admcuenta.verificarConformidad(false));
+        System.out.println("Debe Activar Conformidad");
+    }
+    
+    @Test
+    public void siIngresoConformidadDebeAceptarlo(){
+        assertTrue(admcuenta.verificarConformidad(true));
+        System.out.println("Conformidad Activado");
     }
     
     @Test

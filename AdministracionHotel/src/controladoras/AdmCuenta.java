@@ -55,7 +55,28 @@ public class AdmCuenta {
         return false;
     }
      
-    
-    
+      public boolean verificarRepetirPassword(String repetirPassword){
+        if(repetirPassword!=null){
+            return true;
+        }
+        return false;
+    }
+      
+       public boolean verificarNombreHotel(String nombreHotel){
+        if(nombreHotel!=null){
+            return true;
+        }
+        return false;
+    }
+       
+       public boolean verificarConformidad(boolean conformidad){
+        if(conformidad!=false){
+            return true;
+        }
+        return false;
+    }
+       
+      
+      
      
 }
