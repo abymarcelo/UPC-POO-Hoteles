@@ -23,14 +23,14 @@ public class AdmCuenta {
         return cuentas;
     }
     
-    public void registrarCuenta(String correo,String password,String repetirPassword,String nombreHotel,boolean conformidad){
+    public void registrarCuenta(String correo,String password,String repetirPassword,String nombreHotel,String webCorreo,boolean conformidad){
         buscarCorreo(correo);
         
         for(Cuenta cuenta:cuentas){
             if(cuenta.getCorreo().equals(correo))
                 throw new RuntimeException();
         }
-        Cuenta cuenta=new Cuenta(correo, password, repetirPassword, nombreHotel,conformidad);
+        Cuenta cuenta=new Cuenta(correo, password, repetirPassword, nombreHotel,webCorreo,conformidad);
         cuentas.add(cuenta);
     }
     

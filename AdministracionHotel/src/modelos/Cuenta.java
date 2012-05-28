@@ -13,13 +13,15 @@ public class Cuenta {
     private String passWord;
     private String repetirPassword;
     private String nombreHotel;
+    private String webCorreo;
     private boolean conformidad;
 
-    public Cuenta(String correo, String passWord, String repetirPassword, String nombreHotel,boolean conformidad) {
+    public Cuenta(String correo, String passWord, String repetirPassword, String nombreHotel,String webCorreo,boolean conformidad) {
         this.correo = correo;
         this.passWord = passWord;
         this.repetirPassword = repetirPassword;
         this.nombreHotel = nombreHotel;
+         this.webCorreo=webCorreo;
         this.conformidad=conformidad;
     }
 
@@ -39,6 +41,11 @@ public class Cuenta {
         return passWord;
     }
 
+    public String getWebCorreo() {
+        return webCorreo;
+    }
+    
+    
     public String getRepetirPassword() {
         return repetirPassword;
     }
