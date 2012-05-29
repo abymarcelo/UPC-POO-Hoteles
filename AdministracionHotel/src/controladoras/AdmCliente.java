@@ -23,16 +23,16 @@ public class AdmCliente {
         return cuentas;
     }
     
-    public void registrarCuenta(String correo,String password,String repetirPassword,String nombreHotel){
-        buscarCuenta(correo);
-        
-        for(Cuenta cuenta:cuentas){
-            if(cuenta.getCorreo().equals(correo))
-                throw new RuntimeException();
-        }
-        Cuenta cuenta=new Cuenta(correo, password, repetirPassword, nombreHotel);
-        cuentas.add(cuenta);
-    }
+//    public void registrarCuenta(String correo,String password,String repetirPassword,String nombreHotel){
+//        buscarCuenta(correo);
+//        
+//        for(Cuenta cuenta:cuentas){
+//            if(cuenta.getCorreo().equals(correo))
+//                throw new RuntimeException();
+//        }
+//        Cuenta cuenta=new Cuenta(correo, password, repetirPassword, nombreHotel);
+//        cuentas.add(cuenta);
+//    }
     
     private void buscarCuenta(String correo)throws RuntimeException{
         for(Cuenta cuenta:cuentas){
