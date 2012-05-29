@@ -27,16 +27,16 @@ public class AdmCuentaTest {
     @Test
     
     public void clienteYaTieneUncorreoRegistrada(){
-        admcuenta.registrarCuenta("cvera@hotmail.com","car123","car123","Sheraton","Sheraton-hotel",true);
+        admcuenta.registrarCuenta("cvera@hotmail.com","car123","car123","Sheraton","Sheraton-hotel",true,101100);
         assertEquals(1, admcuenta.getCuentas().size());
     }
     
     @Test 
     
     public void clienteYaTieneCorreosRegistradas(){
-        admcuenta.registrarCuenta("lsanchez@hotmail.com","lui123","lui123","Inkamar","Inkamar-hotel",true);
-        admcuenta.registrarCuenta("jrodriguez@hotmail.com","jua123","jua23","Marriot","Marriot-hoterl",true);
-        admcuenta.registrarCuenta("cvera@hotmail.com","car123","car123","Andes","Andes-hotel",true);
+        admcuenta.registrarCuenta("lsanchez@hotmail.com","lui123","lui123","Inkamar","Inkamar-hotel",true,101100);
+        admcuenta.registrarCuenta("jrodriguez@hotmail.com","jua123","jua23","Marriot","Marriot-hoterl",true,101100);
+        admcuenta.registrarCuenta("cvera@hotmail.com","car123","car123","Andes","Andes-hotel",true,101100);
         assertEquals(3, admcuenta.getCuentas().size());
     }
     
@@ -105,14 +105,14 @@ public class AdmCuentaTest {
     
     public void registrarCuentas(){
         assertEquals(0, admcuenta.getCuentas().size());
-        admcuenta.registrarCuenta("cvera@hotmail.com","car123","car123","Sheraton","Sheraton-hotel",true);
+        admcuenta.registrarCuenta("cvera@hotmail.com","car123","car123","Sheraton","Sheraton-hotel",true,023100);
         assertEquals(1, admcuenta.getCuentas().size());
-        admcuenta.registrarCuenta("lsanchez@hotmail.com","lui123","lui123","Inkamar","Inkamar-hotel",true);
-        admcuenta.registrarCuenta("jrodriguez@hotmail.com","jua123","jua23","Marriot","Marrot-hotel",true);
-        admcuenta.registrarCuenta("pmendoza@hotmail.com","pau123","pau123","Andes","Andes-hotel",true);
+        admcuenta.registrarCuenta("lsanchez@hotmail.com","lui123","lui123","Inkamar","Inkamar-hotel",true,023100);
+        admcuenta.registrarCuenta("jrodriguez@hotmail.com","jua123","jua23","Marriot","Marrot-hotel",true,023100);
+        admcuenta.registrarCuenta("pmendoza@hotmail.com","pau123","pau123","Andes","Andes-hotel",true,023100);
         assertEquals(4, admcuenta.getCuentas().size());
         try{
-            admcuenta.registrarCuenta("jrodriguez@hotmail.com","jua123","jua23","Marriot","Marriot-hotel",true);
+            admcuenta.registrarCuenta("jrodriguez@hotmail.com","jua123","jua23","Marriot","Marriot-hotel",true,023100);
             fail();
            }catch(Exception ex){
                assertEquals("CORREO ELECTRONICO YA REGISTRADO", ex.getMessage());
