@@ -56,5 +56,41 @@ public class Cuenta {
         return repetirPassword;
     }
     
+     public boolean isMailCorrecto(String correo){
+        char c1 = correo.charAt(0);
+        int pos1 = 0;
+        int pos2 = 0;
+        int cont=0;
+            
+        if (c1 !='@'&&c1!='.'){
+            for (int i=1; i < correo.length(); i++) {
+                if (correo.charAt(i) == '@') {
+                    pos1 = i;
+                    cont++;
+                }
+            }
+            for (int i=1; i < correo.length(); i++) {
+                if (correo.charAt(i) == '.') {
+                    pos2 = i;
+                }
+            }
+         }
+         if (pos1!=0&&pos2!=0&&cont==1){
+              return true;
+              }
+         else
+              return false;
+     }
     
+     public void MostrarNombresSugeridos(String nombre){
+         System.out.println(nombre+"Hotel");
+         System.out.println("Hotel-"+nombre);
+         System.out.println(nombre+"-Hotel");
+         System.out.println(nombre+"-Perú");
+         System.out.println("Hotel-"+nombre+"-Perú");
+     }
+     
+     public String MensajeCuentaRegistrada(){
+         return ("Cuenta Registrada con Exito \n Tiene 24 horas para confirmar el mail y tiene un plan gratuito");
+     }
 }

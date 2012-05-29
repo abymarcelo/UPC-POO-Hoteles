@@ -131,36 +131,60 @@ public class CuentaTest {
     
     @Test
     public void DebeIngresarCorreoElectronico(){
-        //        Cuenta cuenta1=new Cuenta("","","","","",false);
-        assertNotNull("Debe Ingresar Correo", cuenta1.getCorreo());
+       assertNotNull("Debe Ingresar Correo", cuenta1.getCorreo());
     }
     @Test
     public void DebeIngresarContraseña(){
-        //        Cuenta cuenta1=new Cuenta("","","","","",false);
         assertNotNull("Debe Ingresar Contraseña", cuenta1.getPassWord());
     }
     @Test
     public void DebeIngresarRepetirContraseña(){
-        //        Cuenta cuenta1=new Cuenta("","","","","",false);
         assertNotNull("Debe Ingresar Repetir Contraseña", cuenta1.getRepetirPassword());
     }
     @Test
     public void DebeIngresarNombreDelHotel(){
-        //        Cuenta cuenta1=new Cuenta("","","","","",false);
         assertNotNull("Debe Ingresar Nombre del Hotel", cuenta1.getNombreHotel());
     }
     @Test
     public void DebeIngresarWebDelHotel(){
-        //        Cuenta cuenta1=new Cuenta("","","","","",false);
         assertNotNull("Debe Ingresar Web del Hotel", cuenta1.getWebHotel());
     }
     @Test
     public void DebeIngresarConformidadTerminosYCondiciones(){
-        //        Cuenta cuenta1=new Cuenta("","","","","",false);
         assertNotNull("Debe Aceptar Terminos y Condiciones", cuenta1.isConformidad());
     }
     
+     @Test
+    public void DebeIngresarUnCorreoElectronicoValido(){
+    assertTrue("Mail Invalido",cuenta1.isMailCorrecto(cuenta1.getCorreo()));
+    }
+     
+    @Test
+    public void LasDosContraseñasDebenConcidir(){
+        assertEquals("Las Contraseñas no Coinciden", cuenta1.getPassWord(), cuenta1.getRepetirPassword());
+    } 
+    
+    @Test
+    public void SeDebeMostrarNombresSugeridos(){
+        assertNotNull("No Ingreso Nombre del Hotel", cuenta1.getNombreHotel());
+            cuenta1.MostrarNombresSugeridos(cuenta1.getNombreHotel());
+        
+    }
+    
+     @Test
+    public void MensajeDeRegistroDeCuentaConExito(){
+    String mail1="dennys@ata.com.pe";
+    String pass1="123";
+    String rpass1="123";
+    String hotel1="Kenshin";
+    String web1="Kenshin.com";
+    boolean Conformidad1=false;
+    long HoraCreacion=111213;
+    Cuenta cuenta2=new Cuenta(mail1,pass1,rpass1,hotel1,web1,Conformidad1,HoraCreacion);
+    cuenta2.MensajeCuentaRegistrada();
+    assertSame("Cuenta Registrada con Exito \n Tiene 24 horas para confirmar el mail y tiene un plan gratuito", cuenta2.MensajeCuentaRegistrada());
     
     
+    }
     
 }
