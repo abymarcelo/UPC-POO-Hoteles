@@ -22,11 +22,7 @@ public class ClienteTest {
         assertEquals(0, cliente.getCuentas().size());
     }
     
-     @Test
-    public void ValidarDatosCliente(){
-        Cliente cliente = new Cliente("Java Confort", "http://Java.clerk.im");
-        assertNotNull(cliente.getNombre(), cliente.getEnlace());
-    }
+    
     
      
 }

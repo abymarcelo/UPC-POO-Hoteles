@@ -9,32 +9,60 @@ package modelos;
  * @author CARLOS 
  * @modificado Manuel
  */
-public class Cliente {
-    private String Nombre;
-    private String Enlace;
+public class Cliente extends Usuario{
+    private String apellido;
+    private String pasaporte;
+    private String sexo;
+    private String cumpleaños;
+    private String comentarios;
 
-    public String getEnlace() {
-        return Enlace;
+    public Cliente(String apellido, String pasaporte, String sexo, String cumpleaños, String comentarios, String codigo, String nombre, String telefono, String correo, String direccion, String ciudad, String estado, String pais) {
+        super(codigo, nombre, telefono, correo, direccion, ciudad, estado, pais);
+        this.apellido = apellido;
+        this.pasaporte = pasaporte;
+        this.sexo = sexo;
+        this.cumpleaños = cumpleaños;
+        this.comentarios = comentarios;
     }
 
-    public String getNombre() {
-        return Nombre;
-    }   
-
- 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public String getApellido() {
+        return apellido;
     }
 
-    public void setEnlace(String Enlace) {
-        this.Enlace = Enlace;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
     
-    public Cliente(String Nombre, String Enlace ){
-    this.Nombre=Nombre;
-    this.Enlace=Enlace;    
-}
-    public String NombreNoExiste(){
-        return "Nombre de hotel no existe";
+    public String getComentarios() {
+        return comentarios;
     }
+
+    public void setComentarios(String comentarios) {
+        this.comentarios = comentarios;
+    }
+
+    public String getCumpleaños() {
+        return cumpleaños;
+    }
+
+    public void setCumpleaños(String cumpleaños) {
+        this.cumpleaños = cumpleaños;
+    }
+
+    public String getPasaporte() {
+        return pasaporte;
+    }
+
+    public void setPasaporte(String pasaporte) {
+        this.pasaporte = pasaporte;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
 }
