@@ -15,20 +15,16 @@ public class Cuenta {
     private String nombreHotel;
     private String webHotel;
     private boolean conformidad;
-    private long HoraCreacion;
+   
 
-    public long getHoraCreacion() {
-        return HoraCreacion;
-    }
-
-    public Cuenta(String correo, String passWord, String repetirPassword, String nombreHotel,String webHotel,boolean conformidad, long HOraCreacion) {
+    public Cuenta(String correo, String passWord, String repetirPassword, String nombreHotel,String webHotel,boolean conformidad) {
         this.correo = correo;
         this.passWord = passWord;
         this.repetirPassword = repetirPassword;
         this.nombreHotel = nombreHotel;
          this.webHotel=webHotel;
         this.conformidad=conformidad;
-        this.HoraCreacion=HoraCreacion;
+        
     }
 
     public boolean isConformidad() {

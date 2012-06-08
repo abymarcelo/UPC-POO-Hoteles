@@ -30,7 +30,7 @@ public class AdmCuenta {
             if(cuenta.getCorreo().equals(correo))
                 throw new RuntimeException();
         }
-        Cuenta cuenta=new Cuenta(correo, password, repetirPassword, nombreHotel,webHotel,conformidad, HoraCreacion);
+        Cuenta cuenta=new Cuenta(correo, password, repetirPassword, nombreHotel,webHotel,conformidad);
         cuentas.add(cuenta);
     }
     
@@ -39,44 +39,5 @@ public class AdmCuenta {
             if(cuenta.getCorreo().equals(correo))
                 throw new RuntimeException("CORREO ELECTRONICO YA REGISTRADO");         
         }
-    }
-    
-     public boolean verificarCorreo(String correo){
-        if(correo!=null){
-            return true;
-        }
-          return false;
-    }
-     
-     public boolean verificarPassword(String password){
-        if(password!=null){
-            return true;
-        }
-        return false;
-    }
-     
-      public boolean verificarRepetirPassword(String repetirPassword){
-        if(repetirPassword!=null){
-            return true;
-        }
-        return false;
-    }
-      
-       public boolean verificarNombreHotel(String nombreHotel){
-        if(nombreHotel!=null){
-            return true;
-        }
-        return false;
-    }
-       
-       public boolean verificarConformidad(boolean conformidad){
-        if(conformidad!=false){
-            return true;
-        }
-        return false;
-    }
-       
-      
-      
-     
+    }    
 }
