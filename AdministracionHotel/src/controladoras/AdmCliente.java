@@ -5,7 +5,8 @@
 package controladoras;
 
 import java.util.ArrayList;
-import modelos.Cuenta;
+import modelos.Cliente;
+
 
 /**
  *
@@ -13,30 +14,29 @@ import modelos.Cuenta;
  */
 public class AdmCliente {
     
-    private ArrayList<Cuenta> cuentas;
+    private ArrayList<Cliente> clientes;
 
     public AdmCliente() {
-        cuentas=new ArrayList<Cuenta>();
+        clientes=new ArrayList<Cliente>();
     }
 
-    public ArrayList<Cuenta> getCuentas() {
-        return cuentas;
+    public ArrayList<Cliente> getClientes() {
+        return clientes;
+    }
+
+    
+
+    
+    
+    public void registrarCliente(String codigo, String nombre,String apellido,String pasaporte,String telefono,String sexo,String correo, String direccion, String ciudad, String estado, String pais,String cumpleaños,String comentarios){
+       buscarCuenta(correo);
+       Cliente cliente=new Cliente(codigo,nombre,apellido,pasaporte,telefono,sexo,correo,direccion,ciudad,estado,pais,cumpleaños,comentarios);
+       clientes.add(cliente);
     }
     
-//    public void registrarCuenta(String correo,String password,String repetirPassword,String nombreHotel){
-//        buscarCuenta(correo);
-//        
-//        for(Cuenta cuenta:cuentas){
-//            if(cuenta.getCorreo().equals(correo))
-//                throw new RuntimeException();
-//        }
-//        Cuenta cuenta=new Cuenta(correo, password, repetirPassword, nombreHotel);
-//        cuentas.add(cuenta);
-//    }
-    
     private void buscarCuenta(String correo)throws RuntimeException{
-        for(Cuenta cuenta:cuentas){
-            if(cuenta.getCorreo().equals(correo))
+        for(Cliente cliente:clientes){
+            if(cliente.getCorreo().equals(correo))
                 throw new RuntimeException("CORREO ELECTRONICO YA REGISTRADO");         
         }
     }
@@ -50,7 +50,5 @@ public class AdmCliente {
           return false;
     }
     
-     public int getClientes(){
-        return 0;
-    }
+    
 }
