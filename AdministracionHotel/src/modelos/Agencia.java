@@ -9,7 +9,13 @@ package modelos;
  * @author CARLOS
  */
 public class Agencia extends Usuario{
-    public Agencia(String codigo, String nombre, String telefono, String correo, String direccion, String ciudad, String estado, String pais) {
+
+    private String contacto;
+      
+    public Agencia( String contacto, String codigo, String nombre, String telefono, String correo, String direccion, String ciudad, String estado, String pais) {
         super(codigo, nombre, telefono, correo, direccion, ciudad, estado, pais);
+        this.contacto = contacto;
+
     }
+    
 }
