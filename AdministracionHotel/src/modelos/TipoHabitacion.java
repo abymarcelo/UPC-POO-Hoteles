@@ -11,7 +11,7 @@ package modelos;
 public class TipoHabitacion {
     private String cod_tipoHabitacion;
     private String nombre_Habitacion;
-    private int precio;
+    private double precio;
     private String codHotel;
 
     public String getCodHotel() {
@@ -38,15 +38,15 @@ public class TipoHabitacion {
         this.nombre_Habitacion = nombre_Habitacion;
     }
 
-    public int getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
-    public TipoHabitacion(String cod_tipoHabitacion, String nombre_Habitacion, int precio, String codHotel) {
+    public TipoHabitacion(String cod_tipoHabitacion, String nombre_Habitacion, double precio, String codHotel) {
         this.cod_tipoHabitacion = cod_tipoHabitacion;
         this.nombre_Habitacion = nombre_Habitacion;
         this.precio = precio;
