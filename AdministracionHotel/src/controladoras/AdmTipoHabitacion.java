@@ -23,7 +23,7 @@ public class AdmTipoHabitacion {
     }
     
     
-    public void registrarTipoHabitacion(String cod_tipoHabitacion,String nombre_Habitacion,int precio,String codHotel){
+    public void registrarTipoHabitacion(String cod_tipoHabitacion,String nombre_Habitacion,double precio,String codHotel){
         
         String mensaje="ok";
         
