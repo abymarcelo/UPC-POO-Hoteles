@@ -23,7 +23,7 @@ public class AdmTipoHabitacionTest {
         
         String cod_tipoHabitacion = "11";
         String nombre_Habitacion  = "El rapido";
-        int    precio             = 2;
+        double    precio             = 20.00;
         String codHotel           = "1";
        
         AdmTipoHabitacion tipHab = new AdmTipoHabitacion();
