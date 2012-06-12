@@ -6,7 +6,6 @@ package controladoras;
 import controladoras.CuentaException;
 import modelos.Hotel;
 import java.util.ArrayList;
-import modelos.Hotel;
 
 public class AdmHotel {
 

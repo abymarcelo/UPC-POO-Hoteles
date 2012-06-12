@@ -12,13 +12,55 @@ package modelos;
 public class Reserva {
     private int NumeroReserva;
     private TipoHabitacion habitacion;
-    private Date Fecha;
+    private String CodHabitacion;
+    private int fechaIngreso;
+    private int fechaSalida;
+    private int dias;
+    private double total;
     private Date Hora;
     private boolean Status;
     private int CantidadOcupantes;
     private boolean EstadoReserva;
     private Cliente cliente;
     private String Notas;
+    
+    public Reserva(int codigoHabitacion, int fechaIngreso,int fechaSalida,int dias,double total){
+        this.CodHabitacion=habitacion.getNombre_Habitacion();
+        this.fechaIngreso=fechaIngreso;
+        this.fechaSalida=fechaSalida;
+        this.dias=dias;
+        this.total=total;
+    }
+
+     public Reserva(int cantidadOcupantes,double descuento,int codigoHabitacion, int fechaIngreso,int fechaSalida,int dias,double total){
+        this.CodHabitacion=habitacion.getNombre_Habitacion();
+        this.fechaIngreso=fechaIngreso;
+        this.fechaSalida=fechaSalida;
+        this.dias=dias;
+        this.total=total;
+    }
+     
+    public String getCodHabitacion() {
+        return CodHabitacion;
+    }
+
+    public int getDias() {
+        return dias;
+    }
+
+    public int getFechaIngreso() {
+        return fechaIngreso;
+    }
+
+    public int getFechaSalida() {
+        return fechaSalida;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+    
+    
     
     public int getCantidadOcupantes() {
         return CantidadOcupantes;
@@ -36,13 +78,7 @@ public class Reserva {
         this.EstadoReserva = EstadoReserva;
     }
 
-    public Date getFecha() {
-        return Fecha;
-    }
-
-    public void setFecha(Date Fecha) {
-        this.Fecha = Fecha;
-    }
+    
 
     public int getNumeroReserva() {
         return NumeroReserva;

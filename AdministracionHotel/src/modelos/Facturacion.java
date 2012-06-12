@@ -4,30 +4,26 @@
  */
 package modelos;
 
-import java.util.Date;
-
 /**
  *
  * @author Manuel
  */
-public class Facturacion {
+public class Facturacion extends Reserva{
     private Reserva reserva;
-    private Date FechaIngreso;
-    private Date FechaSalida;
-    private int Dias;
+    private int codigoReserva;
     private double PrecioXnoche;
     private double Descuento;
-    private double Total;
-    private int CantidadOcupantes;
     private boolean Estado;
     private Cliente cliente;
     private boolean CheckIn;
     private boolean CheckOut;
-
-    public int getCantidadOcupantes() {
-        return CantidadOcupantes;
+    
+    public Facturacion(double precioXnoche, int cantidadOcupantes, double descuento,int codigoHabitacion, int fechaIngreso,int fechaSalida,int dias, double total){
+        super(cantidadOcupantes,descuento,codigoHabitacion, fechaIngreso, fechaSalida, dias,total);
+        this.PrecioXnoche=precioXnoche;
+        
     }
-
+              
     public boolean isCheckIn() {
         return CheckIn;
     }
@@ -40,36 +36,28 @@ public class Facturacion {
         return Descuento;
     }
 
-    public int getDias() {
-        return Dias;
-    }
-
+   
     public boolean isEstado() {
         return Estado;
     }
 
-    public Date getFechaIngreso() {
-        return FechaIngreso;
-    }
-
-    public Date getFechaSalida() {
-        return FechaSalida;
-    }
-
+   
+   
     public double getPrecioXnoche() {
         return PrecioXnoche;
     }
 
-    public double getTotal() {
-        return Total;
-    }
-
+   
     public Cliente getCliente() {
         return cliente;
     }
 
     public Reserva getReserva() {
         return reserva;
+    }
+
+    public int getCodigoReserva() {
+        return codigoReserva;
     }
 
     
