@@ -26,9 +26,9 @@ public class AdmEmpresa {
 
     
      
-      public void registrarEmpresa(String codigo, String nombre,String telefono,String correo, String direccion, String ciudad, String estado, String pais){
+      public void registrarEmpresa(String codigo, String nombre,String identificacion,String telefono,String correo, String direccion, String ciudad, String estado, String pais, String contacto, String metodoPago,String convenio){
        buscarEmpresa(codigo);
-       Empresa empresa=new Empresa(codigo,nombre,telefono,correo,direccion,ciudad,estado,pais);
+       Empresa empresa=new Empresa(codigo,nombre,identificacion,telefono,correo,direccion,ciudad,estado,pais,contacto,metodoPago,convenio);
        empresas.add(empresa);
     }
       

@@ -23,9 +23,9 @@ public class AdmAgencia {
         return agencias;
     }
      
-      public void registrarAgencia(String codigo, String nombre,String telefono,String correo, String direccion, String ciudad, String estado, String pais){
+      public void registrarAgencia(String codigo, String nombre,String identificacion,String telefono,String correo, String direccion, String ciudad, String estado, String pais,String contacto){
        buscarAgencia(codigo);
-       Agencia agencia=new Agencia(codigo,nombre,telefono,correo,direccion,ciudad,estado,pais);
+       Agencia agencia=new Agencia(codigo,nombre,identificacion,telefono,correo,direccion,ciudad,estado,pais,contacto);
        agencias.add(agencia);
     }
       
