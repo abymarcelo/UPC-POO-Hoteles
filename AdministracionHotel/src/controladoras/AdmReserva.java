@@ -21,11 +21,20 @@ public class AdmReserva {
         reserva = new ArrayList<Reserva>();
    }
     
-   private String validarDatosIncompletosReserva(int codHabitacion, int FechaLlegada, int FechaSalida, int Dias, double Total)
+   private String validarDatosIncompletosReserva(String codigoCliente,int codigoReserva,String codHabitacion, int FechaLlegada, int FechaSalida, int Dias, double Total)
             throws CuentaException {
         String msg = "OK";
         
-        if (codHabitacion==0)
+        if (codigoCliente=="")
+        {
+            msg = "\nDebe Ingresar el Codigo del cliente";
+        }
+        
+        if (codigoReserva==0)
+        {
+            msg = "\nDebe ingresar el codigo de Reserva";
+        }
+        if (codHabitacion=="")
         {
             msg = "\nDebeIngresar el Codigo de la reserva";
         }
@@ -51,26 +60,29 @@ public class AdmReserva {
        
         return msg;
     }
-   
-    public void registrarReserva(int codHabitacion, int fechaLlegada, int fechaSalida, int dias, double total)
+       
+   //(string,int,string,int,int,int,double)
+    public void registrarReserva(String codigoCliente,int codigoReserva,String nombreHabitacion, int fechaLlegada, int fechaSalida, int dias, double total)
             throws CuentaException {
         // Aplicar validaciones de negocio
+        
         String mensaje;
-        mensaje = validarDatosIncompletosReserva(codHabitacion, fechaLlegada, fechaSalida, dias, total);
+        mensaje = validarDatosIncompletosReserva(codigoCliente,codigoReserva,nombreHabitacion, fechaLlegada, fechaSalida, dias, total);
         System.out.println("\nIngreso los Datos Correctos -->"+mensaje);
             if(mensaje.equals("OK"))
             {
-                reserva.add(new Reserva(codHabitacion, fechaLlegada, fechaSalida, dias, total));
+                reserva.add(new Reserva(codigoCliente,codigoReserva,nombreHabitacion, fechaLlegada, fechaSalida, dias, total));
             }
+              
        }
            
     
     
     
-     public Reserva buscar(int codReserva) {
+     public Reserva buscar(int codigoReserva) {
         // Buscar el tipo de habitacion por codigo
         for(Reserva reservas : reserva)
-            if (reservas.getNumeroReserva()==codReserva)
+            if (reservas.getCodigoReserva()==codigoReserva)
                return reservas;
         return null;
     }

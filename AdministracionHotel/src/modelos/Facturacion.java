@@ -18,8 +18,8 @@ public class Facturacion extends Reserva{
     private boolean CheckIn;
     private boolean CheckOut;
     
-    public Facturacion(double precioXnoche, int cantidadOcupantes, double descuento,int codigoHabitacion, int fechaIngreso,int fechaSalida,int dias, double total){
-        super(cantidadOcupantes,descuento,codigoHabitacion, fechaIngreso, fechaSalida, dias,total);
+    public Facturacion(double precioXnoche, int cantidadOcupantes, double descuento,String codigoCliente,int codigoReserva,String codigoHabitacion, int fechaIngreso,int fechaSalida,int dias, double total){
+        super(cantidadOcupantes,descuento,codigoCliente,codigoReserva,codigoHabitacion, fechaIngreso, fechaSalida, dias,total);
         this.PrecioXnoche=precioXnoche;
         
     }

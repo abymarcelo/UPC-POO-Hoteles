@@ -22,13 +22,17 @@ public class AdmFacturacion {
         facturacion = new ArrayList<Facturacion>();
    }
     
-   private String validarDatosIncompletosReserva(int codReserva, int FechaLlegada, int FechaSalida, int Dias, double Total)
+   private String validarDatosIncompletosReserva(String codigoCliente,String codReserva, int FechaLlegada, int FechaSalida, int Dias, double Total)
             throws CuentaException {
         String msg = "OK";
-        
-        if (codReserva==0)
+        if (codigoCliente=="")
         {
-            msg = "\nDebeIngresar el Codigo de la reserva";
+            msg = "\nDebe Ingresar el Codigo del cliente";
+        }
+        
+        if (codReserva=="")
+        {
+            msg = "\nDebe Ingresar el Codigo de la reserva";
         }
         
         if (FechaLlegada==0)
@@ -53,24 +57,27 @@ public class AdmFacturacion {
         return msg;
     }
    
-    public void registrarFacturacion(int codHabitacion, int fechaLlegada, int fechaSalida, int dias, double precioXnoche, double descuento, double total, int cantidad)
+    public void registrarFacturacion(String codigoCliente,int codReserva,String codHabitacion, int fechaLlegada, int fechaSalida, int dias, double precioXnoche, double descuento, double total, int cantidad)
             throws CuentaException {
         // Aplicar validaciones de negocio
         String mensaje;
-        mensaje = validarDatosIncompletosReserva(codHabitacion, fechaLlegada, fechaSalida, dias, total);
+        mensaje = validarDatosIncompletosReserva(codigoCliente,codHabitacion, fechaLlegada, fechaSalida, dias, total);
         System.out.println("\nIngreso los Datos Correctos -->"+mensaje);
             if(mensaje.equals("OK"))
             {
-                facturacion.add(new Facturacion(precioXnoche,cantidad,descuento,codHabitacion, fechaLlegada, fechaSalida, dias,total));
+                facturacion.add(new Facturacion(precioXnoche,cantidad,descuento,codigoCliente,codReserva,codHabitacion, fechaLlegada, fechaSalida, dias,total));
+            
+    
+            
             }
        }
            
     
     
-     public Facturacion buscar(int codReserva) {
+     public Facturacion buscar(String nombreHabitacion) {
         // Buscar el tipo de habitacion por codigo
         for(Facturacion facturacions : facturacion)
-            if (facturacions.getCodigoReserva()==codReserva)
+            if (facturacions.getNombreHabitacion()==nombreHabitacion)
                return facturacions;
         return null;
     }

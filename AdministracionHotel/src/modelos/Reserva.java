@@ -10,7 +10,8 @@ package modelos;
  * @author Manuel
  */
 public class Reserva {
-    private int NumeroReserva;
+    private int CodigoReserva;
+    private String NombreHabitacion;
     private TipoHabitacion habitacion;
     private String CodHabitacion;
     private int fechaIngreso;
@@ -22,25 +23,50 @@ public class Reserva {
     private int CantidadOcupantes;
     private boolean EstadoReserva;
     private Cliente cliente;
+    private String codigoCliente ;
     private String Notas;
     
-    public Reserva(int codigoHabitacion, int fechaIngreso,int fechaSalida,int dias,double total){
-        this.CodHabitacion=habitacion.getNombre_Habitacion();
+    //    reserva.add(new Reserva(codigoCliente,codigoReserva,codHabitacion, fechaLlegada, fechaSalida, dias, total));
+         
+    public Reserva(String codigoCliente, int codigoReserva,String nombreHabitacion, int fechaIngreso,int fechaSalida,int dias,double total){
+        this.codigoCliente=codigoCliente;//cliente.getCodigo();
+        this.CodigoReserva=codigoReserva;
+        this.NombreHabitacion=CodHabitacion;//habitacion.getNombre_Habitacion();
         this.fechaIngreso=fechaIngreso;
         this.fechaSalida=fechaSalida;
         this.dias=dias;
         this.total=total;
     }
 
-     public Reserva(int cantidadOcupantes,double descuento,int codigoHabitacion, int fechaIngreso,int fechaSalida,int dias,double total){
-        this.CodHabitacion=habitacion.getNombre_Habitacion();
+     public Reserva(int cantidadOcupantes,double descuento,String codigoCliente,int codigoReserva,String nombreHabitacion, int fechaIngreso,int fechaSalida,int dias,double total){
+        this.codigoCliente=codigoCliente;//cliente.getCodigo();
+         this.CodigoReserva=codigoReserva;
+        this.NombreHabitacion=CodHabitacion;//habitacion.getNombre_Habitacion();
         this.fechaIngreso=fechaIngreso;
         this.fechaSalida=fechaSalida;
         this.dias=dias;
         this.total=total;
     }
+
+    public String getCodigoCliente() {
+        return codigoCliente;
+    }
+
+    public void setCodigoCliente(String codigoCliente) {
+        this.codigoCliente = codigoCliente;
+    }
+
+   
      
-    public String getCodHabitacion() {
+    public int getCodigoReserva() {
+        return CodigoReserva;
+    }
+
+    public void setCodigoReserva(int CodigoReserva) {
+        this.CodigoReserva = CodigoReserva;
+    }
+     
+     public String getCodHabitacion() {
         return CodHabitacion;
     }
 
@@ -78,16 +104,14 @@ public class Reserva {
         this.EstadoReserva = EstadoReserva;
     }
 
+    public String getNombreHabitacion() {
+        return NombreHabitacion;
+    }
+
+    public void setNombreHabitacion(String NombreHabitacion) {
+        this.NombreHabitacion = NombreHabitacion;
+    }
     
-
-    public int getNumeroReserva() {
-        return NumeroReserva;
-    }
-
-    public void setNumeroReserva(int NumeroReserva) {
-        this.NumeroReserva = NumeroReserva;
-    }
-
     public Date getHora() {
         return Hora;
     }
