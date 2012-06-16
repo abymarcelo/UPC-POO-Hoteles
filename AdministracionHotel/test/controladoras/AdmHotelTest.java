@@ -21,7 +21,7 @@ public class AdmHotelTest {
     @Test
     public void RegistrarHotel(){
         
-        int     codHotel           = 2;
+        int     codHotel           =5 ;
         String  nombreHotel        = "Melody1";
         String  direccion          = "Lima 515";
         int     cantidadHabitacion = 1;
