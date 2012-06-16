@@ -2,9 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package controladoras;
+package modelos;
 import org.junit.Test;
 import controladoras.AdmTipoPlan;
+import controladoras.AdmUsuario;
 import modelos.Usuario;
 import org.junit.AfterClass;
 import org.junit.Test;

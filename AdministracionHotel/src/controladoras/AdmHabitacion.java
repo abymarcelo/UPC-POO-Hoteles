@@ -4,10 +4,9 @@
  */
 package controladoras;
 
-import modelos.Habitacion;
-import modelos.Hotel;
 import java.util.ArrayList;
 import java.util.Iterator;
+import modelos.Habitacion;
 
 /**
  *

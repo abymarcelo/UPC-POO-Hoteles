@@ -30,16 +30,16 @@ public class AdmHotelTest {
         AdmHotel hotel = new AdmHotel();
         marca          = true;
         
-        try {
-            if(marca==true){
-                 System.out.print("llego aqui");
-                hotel.registrarHotel(codHotel, nombreHotel, direccion,cantidadHabitacion);
-               
-            }
-        } catch (CuentaException ex) {
-            Logger.getLogger(AdmHotelTest.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+//        try {
+//            if(marca==true){
+//                 System.out.print("llego aqui");
+//                hotel.registrarHotel(codHotel, nombreHotel, direccion,cantidadHabitacion);
+//               
+//            }
+//        } catch (CuentaException ex) {
+//            Logger.getLogger(AdmHotelTest.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        
         Hotel hotels = hotel.buscar(codHotel);
         
         System.out.print("\nCodigo Hotel        :" + hotels.getCodigoHotel());

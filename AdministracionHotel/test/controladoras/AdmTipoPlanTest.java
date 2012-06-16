@@ -15,7 +15,7 @@ import org.junit.BeforeClass;
  *
  * @author Kenshin2
  */
-public class TipoPlanTest {
+public class AdmTipoPlanTest {
     
     @Test
     

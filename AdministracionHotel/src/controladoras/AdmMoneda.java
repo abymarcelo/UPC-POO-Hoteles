@@ -4,10 +4,8 @@
  */
 package controladoras;
 
-import modelos.Moneda;
-import modelos.TipoHabitacion;
 import java.util.ArrayList;
-import java.util.Iterator;
+import modelos.Moneda;
 
 /**
  *

@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package admhotel.db;
+package db;
 
 import modelos.Habitacion;
 import modelos.Hotel;
