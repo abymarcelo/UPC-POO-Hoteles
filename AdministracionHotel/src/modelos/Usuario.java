@@ -9,58 +9,107 @@ package modelos;
  * @author CARLOS
  */
 public class Usuario {
-    protected String codigo;
-    protected  String nombre;
-    protected  String telefono;
-    protected  String correo;
-    protected  String direccion;
-    protected  String ciudad;
-    protected  String estado;
-    protected  String pais;
+    private String correo;
+    private String passWord;
+    private String nombreHotel;
+    private String webHotel;
+    private boolean conformidad;
+    private Hotel nombre;
+    private TipoPlan tipoPlan;
 
-    public Usuario(String codigo, String nombre, String telefono, String correo, String direccion, String ciudad, String estado, String pais) {
-        this.codigo = codigo;
-        this.nombre = nombre;
-        this.telefono = telefono;
+    public Usuario(String correo, String passWord, String nombreHotel, String webHotel, boolean conformidad) {
         this.correo = correo;
-        this.direccion = direccion;
-        this.ciudad = ciudad;
-        this.estado = estado;
-        this.pais = pais;
+        this.passWord = passWord;
+        this.nombreHotel = nombreHotel;
+        this.webHotel = webHotel;
+        this.conformidad = conformidad;
+       
+        
     }
 
-    public String getCiudad() {
-        return ciudad;
-    }
-
-    public String getCodigo() {
-        return codigo;
+    public boolean isConformidad() {
+        return conformidad;
     }
 
     public String getCorreo() {
         return correo;
     }
 
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public String getNombre() {
+    public Hotel getHotel() {
         return nombre;
     }
 
-    public String getPais() {
-        return pais;
+    public String getNombreHotel() {
+        return nombreHotel;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String getPassWord() {
+        return passWord;
     }
 
+    public TipoPlan getTipoPlan() {
+        return tipoPlan;
+    }
+
+    public String getWebHotel() {
+        return webHotel;
+    }
+    
+//    public String repetirContraseña(String contraseña){
+//        return contraseña;
+//    }
+    
+    public boolean contraseñaVacia(String contraseña){
+        if(contraseña==null)
+            return false;
+            else
+            return true;
+        
+    }
     
     
-}
+    
+     public boolean isMailCorrecto(String correo){
+        char c1 = correo.charAt(0);
+        int pos1 = 0;
+        int pos2 = 0;
+        int cont=0;
+            
+        if (c1 !='@'&&c1!='.'){
+            for (int i=1; i < correo.length(); i++) {
+                if (correo.charAt(i) == '@') {
+                    pos1 = i;
+                    cont++;
+                }
+            }
+            for (int i=1; i < correo.length(); i++) {
+                if (correo.charAt(i) == '.') {
+                    pos2 = i;
+                }
+            }
+         }
+         if (pos1!=0&&pos2!=0&&cont==1){
+              return true;
+              }
+         else
+              return false;
+     }
+    
+     public void MostrarNombresSugeridos(String nombre){
+         System.out.println(nombre+"Hotel");
+         System.out.println("Hotel-"+nombre);
+         System.out.println(nombre+"-Hotel");
+         System.out.println(nombre+"-Perú");
+         System.out.println("Hotel-"+nombre+"-Perú");
+     }
+     
+     public String MensajeCuentaRegistrada(){
+         return ("Cuenta Registrada con Exito \n Tiene 24 horas para confirmar el mail y tiene un plan gratuito");
+     }
+    
+
+   
+ }
+    
+    
+
