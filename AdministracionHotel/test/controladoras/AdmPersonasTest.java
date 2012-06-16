@@ -22,10 +22,10 @@ public class AdmPersonasTest {
 //            Boolean estado, String pais,  String comentarios) {
 //        
     
-   Persona objPersonas=new Persona("AMAYA",new Date(2012,06,12),"Manuel","","4206595","Masculino","","","Lima",true,"Peru","");
-   Persona objPersonas1=new Persona("VERA",new Date(2012,06,12),"Carlos","","4206595","Masculino","","","Lima",true,"Peru","");
-   Persona objPersonas2=new Persona("ANGELES",new Date(2012,06,12),"Dennis","","4206595","Masculino","","","Lima",true,"Peru","");
-   Persona objPersonas3=new Persona("HERRERA",new Date(2012,06,12),"Danny","","4206595","Masculino","","","Lima",true,"Peru","");
+//   Persona objPersonas=new Persona("AMAYA",new Date(2012,06,12),"Manuel","","4206595","Masculino","","","Lima",true,"Peru","");
+//   Persona objPersonas1=new Persona("VERA",new Date(2012,06,12),"Carlos","","4206595","Masculino","","","Lima",true,"Peru","");
+//   Persona objPersonas2=new Persona("ANGELES",new Date(2012,06,12),"Dennis","","4206595","Masculino","","","Lima",true,"Peru","");
+//   Persona objPersonas3=new Persona("HERRERA",new Date(2012,06,12),"Danny","","4206595","Masculino","","","Lima",true,"Peru","");
 
    //Tarjeta objTarjetas=new Tarjeta();
     

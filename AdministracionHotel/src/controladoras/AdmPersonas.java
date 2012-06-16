@@ -114,4 +114,10 @@ public class AdmPersonas {
         
         return contador;
    }
+    
+    public void seleccionarPersona(){
+     ArrayList<Persona> persona = Persona.getPersona();
+     for(int i=0;i<personas.size();i++)
+         System.out.print(personas.get(i).getNombre()+"\n");
+ }
 }
