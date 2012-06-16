@@ -3,22 +3,23 @@ package controladoras;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import modelos.Habitacion;
 
 //
 
 
 public class AdmTablero {
-    Calendar hoy;
-    public void capturarFecha(Calendar fecha){
+//    Calendar hoy;
+//    public void capturarFecha(Calendar fecha){
 //        if (fecha.equals(null))
-            hoy = fecha;
+//            hoy = fecha;
 //        else{
 //             return hoy;
 //        }
-           
+//           
 //        return fecha;
-    }
+//    }
     
     public boolean VerificarFechaPorSemana(int vista,String fecha){
         boolean a=false;
@@ -33,6 +34,7 @@ public class AdmTablero {
    
     public String[] AjustarTableroPorSemana(int vista){
 //        Calendar hoy = capturarFecha();
+        Calendar hoy= Calendar.getInstance();
         if (hoy==null)
             hoy=Calendar.getInstance();
               
@@ -85,6 +87,7 @@ public class AdmTablero {
     
       public String[] AjustarTableroPorMes(int opcion,int vista){
 //        Calendar hoy = capturarFecha();
+          Calendar hoy=Calendar.getInstance();
           if (hoy==null)
             hoy=Calendar.getInstance();
         int i=0;
@@ -145,9 +148,23 @@ public class AdmTablero {
     
   public void seleccionarReserva(){
      ArrayList<Habitacion> habitaciones = Habitacion.getHabitacion();
-     for(int i=0;i<habitaciones.size();i++)
-         System.out.print(habitaciones.get(i).getNombreHabitacion()+"\n");
+//     for(int i=0;i<habitaciones.size();i++)
+//         System.out.print(habitaciones.get(i).getNombreHabitacion()+"\n");
  }
     
+     public void OrdenarPorNombreHabitacion(){
+        ArrayList<Habitacion> habitaciones = Habitacion.getHabitacion();
+//       Collections.sort(habitaciones, new Habitacion.nombreHabitacionComparator().compare(habitaciones., habitaciones));  
+        Collections.sort(habitaciones);
+        for(int i=0;i<habitaciones.size();i++)
+         System.out.print(habitaciones.get(i).getNombreHabitacion()+"\n");
+    }
+
     
+    public void OrdenarPorTipoHabitacion(){
+        ArrayList<Habitacion> habitaciones = Habitacion.getHabitacion();
+        Collections.sort(habitaciones); 
+        for(int i=0;i<habitaciones.size();i++)
+         System.out.print(habitaciones.get(i).getTipoHabitacion()+"\n");
+    }
 }

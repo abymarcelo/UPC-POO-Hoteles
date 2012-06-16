@@ -6,12 +6,13 @@ package modelos;
 
 import db.dbHabitacion;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 /**
  *
  * @author Fam Herrera
  */
-public class Habitacion {
+public class Habitacion implements Comparable {
     String nombreHotel;
     String nombreHabitacion;
     String tipoHabitacion;
@@ -61,4 +62,29 @@ public class Habitacion {
         dbHabitacion habitaciones =  new dbHabitacion();             
         return habitaciones.simulaDataHabitaciones();
     }
+    
+  
+    
+    public int compareTo(Object o) {
+        Habitacion hab = (Habitacion)o;
+            return this.getTipoHabitacion().compareToIgnoreCase(hab.tipoHabitacion);
+            }
+
+    public int compareTo2(Object o){
+        Habitacion hab = (Habitacion)o;
+            return this.getNombreHabitacion().compareToIgnoreCase(hab.nombreHabitacion);
+    }
+    
+    public class nombreHabitacionComparator implements Comparator {
+
+public int compare(Object o1, Object o2) { 
+        Habitacion hab1 = (Habitacion)o1;
+        Habitacion hab2 = (Habitacion)o2;
+        return hab1.getNombreHabitacion().
+                compareTo(hab2.getNombreHabitacion()); 
+
+    }
+
+        
+    } 
 }

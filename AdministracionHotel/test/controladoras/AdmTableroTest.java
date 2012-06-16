@@ -11,7 +11,7 @@ import org.junit.Test;
 
 public class AdmTableroTest {
     
-     @Test
+  @Test
      public void debeMostrarPantallaReserva(){
          AdmTablero tablero = new AdmTablero();
          tablero.seleccionarReserva();
@@ -48,7 +48,8 @@ public class AdmTableroTest {
      
      @Test
      public void debeOrdenarTableroPorTipoDeHabitacion(){
-         
+         AdmTablero tablero = new AdmTablero();
+         tablero.OrdenarPorTipoHabitacion();
      }
      
      @Test
