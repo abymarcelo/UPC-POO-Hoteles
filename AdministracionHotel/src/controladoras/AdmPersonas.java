@@ -115,9 +115,18 @@ public class AdmPersonas {
         return contador;
    }
     
-    public void seleccionarPersona(){
-     ArrayList<Persona> persona = Persona.getPersona();
+    public void seleccionarPersona(String nombre){
+     ArrayList<Persona> personas = Persona.getPersona();
      for(int i=0;i<personas.size();i++)
-         System.out.print(personas.get(i).getNombre()+"\n");
- }
+         if (nombre.equals(personas.get(i).getNombre()))
+                   System.out.print("Es cliente frecuente");
+              
+    }
+    
+    public void ListarPersona(){
+     ArrayList<Persona> personas = Persona.getPersona();
+     for(int i=0;i<personas.size();i++)
+          System.out.print("\r\n" +"Persona : " + personas.get(i).getNombre());
+              
+    }
 }

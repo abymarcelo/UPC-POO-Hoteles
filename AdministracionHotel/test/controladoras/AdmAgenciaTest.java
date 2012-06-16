@@ -12,7 +12,7 @@ import org.junit.BeforeClass;
 
 /**
  *
- * @author Erika Gina
+ * @author manuel
  */
 public class AdmAgenciaTest {
     

@@ -23,19 +23,19 @@ public class AdmEmpresaTest {
         public void RegistrarEmpresa(){
         
         String identificacion="123";
-        String contacto="as";
-        String metodoPago="e";
-        String convenio="uyuyu";
-        String nombre="jhjhjh";
-        String pasaporte="hhgh";
-        String telefono="hghgh";
-        String sexo="hghg";
-        String email="jgjgh";
-        String direccion="hghytu";
-        String ciudad="jgjgjg";
+        String contacto="Amaya";
+        String metodoPago="Efectivo";
+        String convenio="Efectivo";
+        String nombre="Romero";
+        String pasaporte="";
+        String telefono="";
+        String sexo="";
+        String email="mamayas@gromero.com.pe";
+        String direccion="Callao";
+        String ciudad="Lima";
         Boolean estado=true;
-        String pais="bhcfdxfd";
-        String comentarios="hghgh";
+        String pais="Peru";
+        String comentarios="";
                 
         AdmEmpresa empresa = new AdmEmpresa();
         try {

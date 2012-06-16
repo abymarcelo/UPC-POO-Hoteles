@@ -16,18 +16,7 @@ import org.junit.Test;
  * @author manuel
  */
 public class AdmPersonasTest {
-//    
-//    public Persona(String apellido,Date fechaNacimiento,
-//            String nombre, String pasaporte,String telefono, String sexo,String email, String direccion, String ciudad, 
-//            Boolean estado, String pais,  String comentarios) {
-//        
-    
-//   Persona objPersonas=new Persona("AMAYA",new Date(2012,06,12),"Manuel","","4206595","Masculino","","","Lima",true,"Peru","");
-//   Persona objPersonas1=new Persona("VERA",new Date(2012,06,12),"Carlos","","4206595","Masculino","","","Lima",true,"Peru","");
-//   Persona objPersonas2=new Persona("ANGELES",new Date(2012,06,12),"Dennis","","4206595","Masculino","","","Lima",true,"Peru","");
-//   Persona objPersonas3=new Persona("HERRERA",new Date(2012,06,12),"Danny","","4206595","Masculino","","","Lima",true,"Peru","");
 
-   //Tarjeta objTarjetas=new Tarjeta();
     
     public AdmPersonasTest() {
     }
@@ -71,20 +60,18 @@ public class AdmPersonasTest {
         System.out.print("\nPais               :" + personas.getPais());
     }   
    
-@After
-    public void BuscarPersona(){
-     
-       System.out.println("Inicia busqueda de la persona");
-       double contador=0;
-        
-//       for(int i=0; i < objTarjetas.getIndice() ; i++){
-//            if(objTarjetas.getNombre()[i].equals(nombrePropietario))
-//                contador=contador + objTransacciones.CalcularTotalPagar(objTarjetas.getCodigo()[i]);
-//              
-//        }
-//            
-//        System.out.println(nombrePropietario + " debe actualmente $." + contador + ".");
-    }   
+    @Test
+     public void EsPersonaFrecuente(){
+         AdmPersonas persona = new AdmPersonas();
+         persona.seleccionarPersona("Carlos");
+         
+     }
    
+    @Test
+     public void ListarPersonas(){
+         AdmPersonas persona = new AdmPersonas();
+         persona.ListarPersona();
+         
+     }
    
 }
