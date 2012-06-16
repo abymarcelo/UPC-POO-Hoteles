@@ -4,6 +4,10 @@
  */
 package modelos;
 
+import db.dbTipoPlan;
+import java.util.ArrayList;
+import java.util.Calendar;
+
 /**
  *
  * @author Kenshin2
@@ -15,6 +19,7 @@ public class TipoPlan {
        private String cantCliente;
        private int cantReserva;
        private double Precio;
+       private Calendar fechaRegistro;
 
     public TipoPlan(String plan, String cantHabitacion, String cantServicio, String cantCliente, int cantReserva, double Precio) {
         this.plan = plan;
@@ -68,5 +73,19 @@ public class TipoPlan {
     public void setPlan(String plan) {
         this.plan = plan;
     }
+
+    public Calendar getFechaRegistro() {
+        return fechaRegistro;
+    }
+
+    public void setFechaRegistro(Calendar fechaRegistro) {
+        this.fechaRegistro = fechaRegistro;
+    }
     
+    
+
+    public static ArrayList<TipoPlan> getTipoPlans(){
+        dbTipoPlan tipos =  new dbTipoPlan();             
+        return tipos.simulaTipoPlan();
+    }
 }

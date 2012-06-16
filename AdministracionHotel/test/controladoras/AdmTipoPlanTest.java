@@ -5,12 +5,7 @@
 package controladoras;
 
 import org.junit.Test;
-import controladoras.AdmTipoPlan;
-import modelos.Usuario;
-import org.junit.AfterClass;
-import org.junit.Test;
 import static org.junit.Assert.*;
-import org.junit.BeforeClass;
 /**
  *
  * @author Kenshin2
@@ -20,6 +15,8 @@ public class AdmTipoPlanTest {
     @Test
     
     public void usuarioDebeRegistrarUnPlanGratis(){
+        AdmUsuario user=new AdmUsuario();
+        user.mostrarDataPlan();
         AdmTipoPlan admTipoPlan=new AdmTipoPlan();
         admTipoPlan.registrarPlan("Clerk Gratis", "∞", "∞", "∞", 70, 0.0);
         assertNotNull(admTipoPlan.buscarPlan("Clerk Gratis"));
@@ -52,9 +49,11 @@ public class AdmTipoPlanTest {
      @Test
      
      public void tipoPlanDebeActivarPaypalAlActivarPlan(){
-         boolean paypal=true;
+         
          AdmTipoPlan admTipoPlan=new AdmTipoPlan();
          
+         
      }
+    
     
 }

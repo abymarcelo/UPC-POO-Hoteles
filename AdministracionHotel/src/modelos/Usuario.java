@@ -4,6 +4,8 @@
  */
 package modelos;
 
+import java.util.Calendar;
+
 /**
  *
  * @author CARLOS
@@ -16,7 +18,8 @@ public class Usuario {
     private boolean conformidad;
     private Hotel nombre;
     private TipoPlan tipoPlan;
-
+    private Calendar fechaRegistro;
+    
     public Usuario(String correo, String passWord, String nombreHotel, String webHotel, boolean conformidad) {
         this.correo = correo;
         this.passWord = passWord;
@@ -51,9 +54,30 @@ public class Usuario {
         return tipoPlan;
     }
 
+    public void setTipoPlan(TipoPlan tipoPlan) {
+        this.tipoPlan = tipoPlan;
+    }
+    
     public String getWebHotel() {
         return webHotel;
     }
+
+    public Calendar getFechaRegistro() {
+        return fechaRegistro;
+    }
+
+    public void setFechaRegistro(Calendar fechaRegistro) {
+        this.fechaRegistro = fechaRegistro;
+    }
+
+    public Hotel getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(Hotel nombre) {
+        this.nombre = nombre;
+    }
+    
     
 //    public String repetirContraseña(String contraseña){
 //        return contraseña;
