@@ -1,7 +1,9 @@
 
 package controladoras;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import modelos.Habitacion;
 
 //
 
@@ -62,9 +64,9 @@ public class AdmTablero {
             String fecha=dia+"/"+(mes+1)+"/"+anio;
             fechasDisponibles[a+1]=fecha;
           }
-        for (int c=0;c<fechasDisponibles.length;c++){
-             System.out.print(fechasDisponibles[c]+"\n");
-         }
+//        for (int c=0;c<fechasDisponibles.length;c++){
+//             System.out.print(fechasDisponibles[c]+"\n");
+//         }
         
         return fechasDisponibles;
     }
@@ -131,9 +133,9 @@ public class AdmTablero {
             String fecha=dia+"/"+(mes+1)+"/"+anio;
             fechasDisponibles[a+1]=fecha;
           }
-        for (int c=0;c<fechasDisponibles.length;c++){
-             System.out.print(fechasDisponibles[c]+"\n");
-         }
+//        for (int c=0;c<fechasDisponibles.length;c++){
+//             System.out.print(fechasDisponibles[c]+"\n");
+//         }
 //        if (p==-1)
             
         
@@ -141,7 +143,11 @@ public class AdmTablero {
     }
     
     
- 
+  public void seleccionarReserva(){
+     ArrayList<Habitacion> habitaciones = Habitacion.getHabitacion();
+     for(int i=0;i<habitaciones.size();i++)
+         System.out.print(habitaciones.get(i).getNombreHabitacion()+"\n");
+ }
     
     
 }

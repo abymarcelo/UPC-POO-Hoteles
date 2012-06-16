@@ -4,6 +4,9 @@
  */
 package modelos;
 
+import db.dbHabitacion;
+import java.util.ArrayList;
+
 /**
  *
  * @author Fam Herrera
@@ -52,5 +55,10 @@ public class Habitacion {
 
     public void setEstadoHabitacion(String estadoHabitacion) {
         this.estadoHabitacion = estadoHabitacion;
+    }
+    
+    public static ArrayList<Habitacion> getHabitacion(){
+        dbHabitacion habitaciones =  new dbHabitacion();             
+        return habitaciones.simulaDataHabitaciones();
     }
 }

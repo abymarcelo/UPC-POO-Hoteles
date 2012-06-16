@@ -13,7 +13,8 @@ public class AdmTableroTest {
     
      @Test
      public void debeMostrarPantallaReserva(){
-         Date fecha;
+         AdmTablero tablero = new AdmTablero();
+         tablero.seleccionarReserva();
          
          
      }
